@@ -54,6 +54,7 @@ if [ "$(curl -L -I "${CUSTOM_ZED_SDK_URL}" -o /dev/null -s -w '%{http_code}\n' |
     --build-arg L4T_MAJOR=$l4t_major \
     --build-arg L4T_MINOR=$l4t_minor \
     --build-arg IMAGE_NAME=$IMAGE_NAME \
+    --build-arg ZED_MSGS_VERSION=5.2.1 \
     -f ./Dockerfile.l4t-humble .
 else
     # Verify the ZED SDK format (digits.digits.digits)
@@ -78,6 +79,7 @@ else
     --build-arg L4T_MAJOR=$l4t_major \
     --build-arg L4T_MINOR=$l4t_minor \
     --build-arg IMAGE_NAME=$IMAGE_NAME \
+    --build-arg ZED_MSGS_VERSION=5.2.1 \
     -f ./Dockerfile.l4t-humble .
 fi
 
